@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Houston | Flood Map</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.46.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.46.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%; }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+	<div id ="mapf"></div>
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1Ijoic2Fpa2F0LTIxIiwiYSI6ImNpdDJucTJocTAwYngyenBkMWRjN2UyMGoifQ.DiBcaXH9Ig_CLPSmq8WplA';
+	var map = new mapboxgl.Map({
+		container: 'map',
+		style: 'mapbox://styles/saikat-21/cjjlogkiwfkq22sqabyp7n9z1', // the outdoors-v10 style but without Hillshade layers
+		center: [-95.61, 29.49],
+		zoom: 11,
+		minZoom: 11,
+		maxZoom: 18
+	});
+	map.addControl(new mapboxgl.NavigationControl());
+	</script>
+</body>
+</html>
