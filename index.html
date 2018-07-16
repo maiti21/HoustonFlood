@@ -19,13 +19,18 @@
 	<div id ="mapf"></div>
     <script>
         mapboxgl.accessToken = 'pk.eyJ1Ijoic2Fpa2F0LTIxIiwiYSI6ImNpdDJucTJocTAwYngyenBkMWRjN2UyMGoifQ.DiBcaXH9Ig_CLPSmq8WplA';
+	var bounds = [
+		[-95.94256818362, 28.83986193797],
+		[-94.68292236328, 29.78821690968]
+	];
 	var map = new mapboxgl.Map({
 		container: 'map',
 		style: 'mapbox://styles/saikat-21/cjjlogkiwfkq22sqabyp7n9z1', // the outdoors-v10 style but without Hillshade layers
 		center: [-95.61, 29.49],
 		zoom: 11,
 		minZoom: 11,
-		maxZoom: 18
+		maxZoom: 18,
+		maxBounds = bounds //sets bounds
 	});
 	map.addControl(new mapboxgl.NavigationControl());
 	</script>
