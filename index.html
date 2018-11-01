@@ -40,22 +40,18 @@
 	<div id="console">
 	<div class='session'>
 		<h2>Houston Flood (29th August, 2017)</h2>
-		<h4>Flood inundation layer</h4>
+		<h4>Flood Layer</h4>
 	<div class='row colors'></div>
     <script>
         mapboxgl.accessToken = 'pk.eyJ1Ijoic2Fpa2F0LTIxIiwiYSI6ImNpdDJucTJocTAwYngyenBkMWRjN2UyMGoifQ.DiBcaXH9Ig_CLPSmq8WplA';
-	var bounds = [
-		[-95.94256818362, 28.83986193797],
-		[-94.68292236328, 29.78821690968]
-	];
 	var map = new mapboxgl.Map({
 		container: 'map',
-		style: 'mapbox://styles/saikat-21/cjjlogkiwfkq22sqabyp7n9z1', // the outdoors-v10 style but without Hillshade layers
+		style: 'mapbox://styles/mapbox/satellite-streets-v9', // the outdoors-v10 style but without Hillshade layers
 		center: [-95.31, 29.31],
 		zoom: 11,
-		minZoom: 11,
+		minZoom: 9,
 		maxZoom: 18,
-		maxBounds: bounds //sets bounds
+		maxBounds: [ [-180, -85], [180, 85] ] //sets bounds
 	});
 	map.addControl(new mapboxgl.NavigationControl());
 	</script>
